@@ -1,4 +1,4 @@
-class Bejegyzes {
+export class Bejegyzes {
     title: String;
     content: String;
     color: String;
