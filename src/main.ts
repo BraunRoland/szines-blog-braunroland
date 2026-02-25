@@ -2,21 +2,28 @@ import { Bejegyzes } from "./bejegyzes"
 import "./style.css"
 
 let lista: Bejegyzes[] = [];
+const kiiras = document.getElementById("kiiras") as HTMLElement;
 
-function componentToHex(c) {
-  var hex = c.toString(16);
-  return hex.length == 1 ? "0" + hex : hex;
-}
+function megjelenit() {
+  lista.forEach(blog => {
+    const article = document.createElement("article") as HTMLElement;
+    const h2 = document.createElement("h2") as HTMLHeadingElement;
+    const p = document.createElement("p") as HTMLParagraphElement;
 
-function rgbToHex(r, g, b) {
-  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    article.style = `color: ${blog.color}`;
+    h2.textContent = blog.title;
+    p.textContent = blog.content;
+    kiiras.appendChild(article);
+    article.appendChild(h2);
+    article.appendChild(p);
+  })
 }
-// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 
 function init() {
   lista.push(new Bejegyzes("cim1", "ez tartalom", "#F78A72"));
   lista.push(new Bejegyzes("cim2", "ez a masik tartalom", "#72F78D"));
   console.log(lista);
+  megjelenit();
 }
 
-document.addEventListener("DOMContentLoaded",init)
+document.addEventListener("DOMContentLoaded",init);

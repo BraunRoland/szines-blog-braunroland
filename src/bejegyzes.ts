@@ -1,9 +1,9 @@
 export class Bejegyzes {
-    title: String;
-    content: String;
-    color: String;
+    title: string;
+    content: string;
+    color: string;
 
-    constructor(title:String, content:String, color: String)
+    constructor(title:string, content:string, color: string)
     {
         if(title == "" || content == "")
         {
