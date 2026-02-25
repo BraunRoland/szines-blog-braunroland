@@ -2,9 +2,11 @@ import { Bejegyzes } from "./bejegyzes"
 
 let lista: Bejegyzes[] = [];
 const kiiras = document.getElementById("kiiras") as HTMLElement;
+const alert = document.getElementById("alert") as HTMLDivElement;
 
 function megjelenit() {
   kiiras.innerHTML = "";
+  alert.hidden = true;
   lista.forEach(blog => {
     const article = document.createElement("article") as HTMLElement;
     const h2 = document.createElement("h2") as HTMLHeadingElement;
@@ -38,7 +40,8 @@ function formSubmit(e: SubmitEvent) {
   {
     if( err instanceof Error)
     {
-
+      alert.innerHTML = `<strong>Hiba!</strong> ${err.message}`;
+      alert.hidden = false;
     }
   }
 }
