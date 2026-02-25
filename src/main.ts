@@ -1,5 +1,4 @@
 import { Bejegyzes } from "./bejegyzes"
-import "./style.css"
 
 let lista: Bejegyzes[] = [];
 const kiiras = document.getElementById("kiiras") as HTMLElement;

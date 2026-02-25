@@ -1,0 +1,19 @@
+#color{
+  width: 200px;
+  height: 60px;
+}
+
+body{
+  background-color: rgb(243, 243, 243);
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 2px rgba(90, 90, 90, 0.562);
+}
+
+#form {
+  padding-bottom: 10px;
+}
